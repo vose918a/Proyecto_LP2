@@ -1,10 +1,13 @@
 package org.fcyt.model;
 
-public class empresa {
-    String nombre,ruc,telefono,direccion;
+public class Empresa {
+    String nombre;
+    String ruc;
+    String telefono;
+    String direccion;
     int id;
 
-    public empresa(){}
+    public Empresa(){}
 
     public String getNombre() {
         return nombre;
