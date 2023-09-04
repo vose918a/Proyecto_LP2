@@ -66,7 +66,7 @@ public class EmpresaDAOImplementacion implements DAO<Empresa>{
                 System.out.println("Exito al Eliminar la empresar");
             }
         }catch (SQLException e){
-            System.out.println("Error al eliminar la empresa")
+            System.out.println("Error al eliminar la empresa");
         }
 
 
