@@ -1,0 +1,101 @@
+JFDML JFormDesigner: "8.1.1.0.298" Java: "17.0.7" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.intellij.uiDesigner.core.GridLayoutManager ) {
+			"$columnCount": 1
+			"$rowCount": 1
+		} ) {
+			name: "panel1"
+			"$client.html.disable": false
+			auxiliary() {
+				"JavaCodeGenerator.variableLocal": true
+			}
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :85:85:p, comp label4:::p::p, space :468::x}, seq l {par l {seq {space :19:19:p, comp label1:::p::p}, seq {space :16:16:p, comp label5:::p::p}, seq {space :16:16:p, comp label3:::p::p}, seq {space :27:27:p, comp label2:::p::p}, comp cancelarButton::l:p::p}, space :p:33:p, par l {comp txtNombre:::p:156:p, comp txtDireccion:::p:156:p, comp txtRUC:::p:156:p, seq {space :42:42:p, comp guardarButton:::p::p}, comp txtTelefono:::p:156:p}, space :::p, comp Table:::p:354:p, space :0:0:x}}"
+				"$verticalGroup": "par l {seq {space :3:3:p, comp label4:::p::p, par l {seq {space :p:24:p, comp label1:::p::p, space :36:36:p, comp label5:::p::p, space :33:33:p, par b {comp label3::b:p::p, comp txtTelefono::b:p::p}, space :33:33:p, comp label2:::p::p}, seq {space :p:21:p, comp txtNombre:::p::p, space :30:30:p, comp txtDireccion:::p::p, space :p:80:p, comp txtRUC:::p::p, space :30:30:p, par b {comp guardarButton::b:p::p, comp cancelarButton::b:p::p}}, seq {space :p:8:p, comp Table:::p:249:p}}, space :::p}}"
+			} ) {
+				name: "panel2"
+				"maximumSize": new java.awt.Dimension( 200, 200 )
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+					"maximumSize.forceValue": true
+				}
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "Table"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "table1"
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "txtNombre"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "txtDireccion"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "txtTelefono"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "txtRUC"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cancelarButton"
+					"text": "Cancelar"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "Nombre"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "RUC"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "Telefono"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "guardarButton"
+					"enabled": true
+					"hideActionText": false
+					"text": "Guardar"
+					"verticalAlignment": 0
+					"verticalTextPosition": 1
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label4"
+					"text": "CREAR EMPRESA"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label5"
+					"text": "Direccion"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				} )
+			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
+				"fill": 3
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 605, 274 )
+		} )
+	}
+}
