@@ -37,7 +37,7 @@ public class EmpresaFormApache extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         txtTelefono = new javax.swing.JTextField();
         btnGuardar = new javax.swing.JToggleButton();
-        txtCancelar = new javax.swing.JToggleButton();
+        btnCancelar = new javax.swing.JToggleButton();
         Table = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
@@ -77,10 +77,10 @@ public class EmpresaFormApache extends javax.swing.JPanel {
 
         btnGuardar.setText("Guardar");
 
-        txtCancelar.setText("Cancelar");
-        txtCancelar.addActionListener(new java.awt.event.ActionListener() {
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCancelarActionPerformed(evt);
+                btnCancelarActionPerformed(evt);
             }
         });
 
@@ -116,7 +116,7 @@ public class EmpresaFormApache extends javax.swing.JPanel {
                         .addGap(52, 52, 52)
                         .addComponent(btnGuardar)
                         .addGap(56, 56, 56)
-                        .addComponent(txtCancelar)))
+                        .addComponent(btnCancelar)))
                 .addContainerGap(72, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -143,7 +143,7 @@ public class EmpresaFormApache extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardar)
-                    .addComponent(txtCancelar))
+                    .addComponent(btnCancelar))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
@@ -177,9 +177,9 @@ public class EmpresaFormApache extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCancelarActionPerformed
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCancelarActionPerformed
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
         // TODO add your handling code here:
@@ -200,7 +200,8 @@ public class EmpresaFormApache extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane Table;
-    private javax.swing.JToggleButton btnGuardar;
+    public javax.swing.JToggleButton btnCancelar;
+    public javax.swing.JToggleButton btnGuardar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -208,10 +209,9 @@ public class EmpresaFormApache extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JToggleButton txtCancelar;
-    private javax.swing.JTextField txtDireccion;
-    private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtRUC;
-    private javax.swing.JTextField txtTelefono;
+    public javax.swing.JTextField txtDireccion;
+    public javax.swing.JTextField txtNombre;
+    public javax.swing.JTextField txtRUC;
+    public javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
 }
