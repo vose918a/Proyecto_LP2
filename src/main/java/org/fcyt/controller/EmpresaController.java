@@ -71,6 +71,9 @@ public class EmpresaController implements ActionListener {
             Limpiar();
             habilitarCampos(false);
         }
+        if (e.getSource() == view.btnEliminar){
+
+        }
     }
 
     public void showEmpresaGUI(){
