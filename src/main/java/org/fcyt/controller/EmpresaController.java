@@ -2,35 +2,28 @@ package org.fcyt.controller;
 
 import org.fcyt.model.DAO.EmpresaDAOImplementacion;
 import org.fcyt.model.Empresa;
-import org.fcyt.view.EmpresaFormApache;
+import org.fcyt.view.GUIEmpresa;
 
-import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 //TODO: Falta que la vista se muestre
 
 public class EmpresaController implements ActionListener {
 
-    EmpresaDAOImplementacion DAO = new EmpresaDAOImplementacion();
-    Empresa e = new Empresa();
-    EmpresaFormApache view = new EmpresaFormApache();
+    private EmpresaDAOImplementacion dao;
+    private GUIEmpresa view;
 
 
-    public EmpresaController(EmpresaFormApache view, EmpresaDAOImplementacion DAO) {
+    public EmpresaController(GUIEmpresa view, EmpresaDAOImplementacion DAO) {
         this.view = view;
-        this.DAO = DAO;
+        this.dao = DAO;
 
         this.view.btnGuardar.addActionListener((ActionListener) this);
-
-//        List<Empresa> Lista = DAO.listar();
-//        for (Empresa empresa : Lista){
-//            System.out.println(empresa.getNombre());
-//        }
     }
     @Override
     public void actionPerformed(ActionEvent e) {
         System.out.println("Hello class");
-        DAO.insertar(getEmpresaForm());
+        dao.insertar(getEmpresaForm());
         Limpiar();
     }
 
