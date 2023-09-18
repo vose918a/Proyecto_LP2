@@ -10,7 +10,7 @@ public class EmpresaTableModel extends AbstractTableModel {
     List<Empresa> lista;
     private String[] columNames = new String []{"ID", "NOMBRE", "DIRECCION", "TELEFONO"};
 
-    public String[] getColumNames() {return columNames}
+    public String[] getColumNames() {return columNames;}
 
     public void setColumNames(String[] columNames) {this.columNames = columNames;}
 
@@ -43,7 +43,7 @@ public class EmpresaTableModel extends AbstractTableModel {
     public List<Empresa> getLista(){return lista;}
     public void setLista(List<Empresa> lista){this.lista = lista;}
 
-    public Empresa getEntityByRow(int index){
+    public Empresa getEntityByRow( int index){
         return lista.get(index);
     }
 }
