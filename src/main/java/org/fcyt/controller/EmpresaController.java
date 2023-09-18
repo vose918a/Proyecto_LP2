@@ -90,8 +90,8 @@ public class EmpresaController implements ActionListener {
                     dao.eliminar(modelo.getEntityByRow(row));
                     listar();
                 }
-            }
-        }else {JOptionPane.showMessageDialog(view,"Debe selecionar una fila");}
+            } else {JOptionPane.showMessageDialog(view,"Debe selecionar una fila");}
+        }
     }
 
     public void showEmpresaGUI(){
@@ -109,11 +109,11 @@ public class EmpresaController implements ActionListener {
     }
 
     private void setEmpresaForm(Empresa empresa){
-        empresa.setId(Integer.valueOf(view.txtID.getText()));
-        empresa.setRuc(view.txtRUC.getText());
-        empresa.setNombre(view.txtNombre.getText());
-        empresa.setDireccion(view.txtDireccion.getText());
-        empresa.setTelefono(view.txtTelefono.getText());
+        view.txtID.setText(String.valueOf(empresa.getId()));
+        view.txtRUC.setText(empresa.getRuc());
+        view.txtNombre.setText(empresa.getNombre());
+        view.txtDireccion.setText(empresa.getDireccion());
+        view.txtTelefono.setText(empresa.getTelefono());
     }
 
     private void Limpiar(){
