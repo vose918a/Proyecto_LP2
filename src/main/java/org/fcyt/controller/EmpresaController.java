@@ -132,12 +132,14 @@ public class EmpresaController implements ActionListener {
     }
 
     private boolean validar(){
-        boolean valid = false;
-        if (view.txtNombre.getText().isEmpty()) valid = true;
-        if (view.txtRUC.getText().isEmpty()) valid = true;
-        if (view.txtDireccion.getText().isEmpty()) valid = true;
-        if (view.txtTelefono.getText().isEmpty()) {valid = true;}
-        return valid;
+        int valid = 0;
+        if (view.txtNombre.getText().isEmpty()) valid++;
+        if (view.txtRUC.getText().isEmpty()) valid++;
+        if (view.txtDireccion.getText().isEmpty()) valid++;
+        if (view.txtTelefono.getText().isEmpty()) valid++;
+        if (valid == 4){
+            return false;
+        }else{ return true; }
     }
 
     private void llenarTabla(JTable table){

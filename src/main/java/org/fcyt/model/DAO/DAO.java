@@ -8,5 +8,5 @@ public interface DAO<T> {
     public void insertar(T t);
     public void actualizar(T t);
     public void eliminar(T t);
-    public List<Empresa> listar();
+    public List<T> listar();
 }

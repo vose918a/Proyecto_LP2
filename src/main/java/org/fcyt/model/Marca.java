@@ -1,19 +1,17 @@
 package org.fcyt.model;
 
 public class Marca {
-    Integer  id;
-    String   descripcion;
-    Marca(){}
+    static Integer  id;
+    static String   descripcion;
+    public Marca(){}
 
-    public Integer getId() {
-        return id;
-    }
+    public static Integer getId() {return id;}
 
     public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getDescripcion() {
+    public static String getDescripcion() {
         return descripcion;
     }
 
