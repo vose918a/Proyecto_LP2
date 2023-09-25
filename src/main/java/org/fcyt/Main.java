@@ -18,14 +18,14 @@ public class Main {
 //       GUIEmpresa view = new GUIEmpresa(null,true);
 //       EmpresaController controller = new EmpresaController(view,dao);
 //       controller.showEmpresaGUI();
-//        MarcaDAOImplementacion dao = new MarcaDAOImplementacion();
-//        GUIMarca view = new GUIMarca(null,true);
-//        MarcaController controller = new MarcaController(view,dao);
-//        controller.showMarcaGUI();
-        IvaDAOImplementacion dao = new IvaDAOImplementacion();
-        GUIIva view = new GUIIva(null,true);
-        IvaController controller = new IvaController(view,dao);
-        controller.showIvaGUI();
+        MarcaDAOImplementacion dao = new MarcaDAOImplementacion();
+        GUIMarca view = new GUIMarca(null,true);
+        MarcaController controller = new MarcaController(view,dao);
+        controller.showMarcaGUI();
+//        IvaDAOImplementacion dao = new IvaDAOImplementacion();
+//        GUIIva view = new GUIIva(null,true);
+//        IvaController controller = new IvaController(view,dao);
+//        controller.showIvaGUI();
 
     }
 }
