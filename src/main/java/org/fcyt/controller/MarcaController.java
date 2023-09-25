@@ -53,10 +53,15 @@ public class MarcaController implements ActionListener {
             Listar();
         }
         if(e.getSource() == view.btnEditar) {
-            op = "E";
-            habilitarCampos(true);
-            clean();
-            Listar();
+            int row = view.Table.getSelectedRow();
+            if(row >= 0){
+                op = "E";
+                habilitarCampos(true);
+                clean();
+                Listar();
+            }else{
+                 JOptionPane.showMessageDialog(view,"Debe seleccionar una fila");
+            }
         }
         if(e.getSource() == view.btnCancelar) {
             clean();
