@@ -137,9 +137,9 @@ public class EmpresaController implements ActionListener {
         if (view.txtRUC.getText().isEmpty()) valid++;
         if (view.txtDireccion.getText().isEmpty()) valid++;
         if (view.txtTelefono.getText().isEmpty()) valid++;
-        if (valid == 4){
-            return false;
-        }else{ return true; }
+        if (valid > 0){
+            return true;
+        }else{ return false; }
     }
 
     private void llenarTabla(JTable table){
