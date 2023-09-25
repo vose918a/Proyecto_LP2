@@ -1,7 +1,6 @@
 package org.fcyt.model.DAO;
 
 import org.fcyt.model.Conexion;
-import org.fcyt.model.Empresa;
 import org.fcyt.model.Marca;
 
 import java.sql.Connection;
@@ -75,7 +74,7 @@ public class MarcaDAOImplementacion implements DAO<Marca>{
 
     @Override
     public List<Marca> listar() {
-        ArrayList<Marca> listaMarcas = new ArrayList<Marca>();
+        ArrayList<Marca> listaMarcas = new ArrayList<>();
         try {
             sentencia = con.prepareStatement("SELECT * FROM marca");
             ResultSet rs = sentencia.executeQuery();

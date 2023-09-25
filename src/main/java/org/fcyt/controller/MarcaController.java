@@ -40,7 +40,7 @@ public class MarcaController implements ActionListener {
                 int row = table.rowAtPoint(e.getPoint());
                 MarcaTableModel model = (MarcaTableModel) table.getModel();
 
-                SetMarca(model.getEntityByRow(row));
+                SetMarcaForm(model.getEntityByRow(row));
 
             }
         });
@@ -71,10 +71,10 @@ public class MarcaController implements ActionListener {
             }
             switch (op) {
                 case "N":
-                    dao.insertar(getMarca());
+                    dao.insertar(getMarcaForm());
                     break;
                 case "E":
-                    dao.actualizar(getMarca());
+                    dao.actualizar(getMarcaForm());
                     break;
             }
             clean();
@@ -86,8 +86,9 @@ public class MarcaController implements ActionListener {
             if(row >= 0){
                 int ok = JOptionPane.showConfirmDialog(view,"Esta seguro de eliminar este registro?","Confirmar",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
                 if(ok == 0){
-                    dao.eliminar(getMarca());
+                    dao.eliminar(getMarcaForm());
                     Listar();
+                    clean();
                 }
             }else {JOptionPane.showMessageDialog(view,"Debe selecionar una fila");}
         }
@@ -95,16 +96,16 @@ public class MarcaController implements ActionListener {
 
     public void showMarcaGUI(){view.setVisible(true);}
 
-    private Marca getMarca(){
+    private Marca getMarcaForm(){
         Marca marca = new Marca();
-        marca.setId(Integer.valueOf(view.txtID.getText()));
+        marca.setId(Integer.parseInt(view.txtID.getText()));
         marca.setDescripcion(view.txtDescripcion.getText());
         return marca;
     }
 
-    private void SetMarca(Marca marca){
-        view.txtID.setText(String.valueOf(Marca.getId()));
-        view.txtDescripcion.setText(Marca.getDescripcion());
+    private void SetMarcaForm(Marca marca){
+        view.txtID.setText(String.valueOf(marca.getId()));
+        view.txtDescripcion.setText(marca.getDescripcion());
     }
 
     private void clean(){
@@ -125,9 +126,13 @@ public class MarcaController implements ActionListener {
     }
 
     private void Listar(){
-        List<Marca> lista = this.dao.listar();
+        List<Marca> lista;
+        lista = this.dao.listar();
         modelo.setLista(lista);
         llenarTabla(view.Table);
+//        for (int i = 0; i < lista.size(); i++) {
+//            System.out.println(lista.get(i).getDescripcion());
+//        }
     }
 
     private void habilitarCampos(boolean x){

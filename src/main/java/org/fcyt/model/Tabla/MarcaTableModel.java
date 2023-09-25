@@ -9,11 +9,11 @@ public class MarcaTableModel extends AbstractTableModel {
 
     List<Marca> lista;
 
-    private String[] columNames = new String[] { "ID", "Descripcion"};
+    private String[] columNames = new String[] { "ID", "DESCRIPCION"};
 
-    public String[] getColumNames() {return columNames;};
+    public String[] getColumNames() {return columNames;}
 
-    public void setColumNames(String[] columNames) {this.columNames = columNames;};
+    public void setColumNames(String[] columNames) {this.columNames = columNames;}
     @Override
     public int getRowCount() {
         return lista.size();
@@ -29,9 +29,9 @@ public class MarcaTableModel extends AbstractTableModel {
         Marca marca = lista.get(rowIndex);
         switch (columnIndex) {
             case 0:
-                return lista.get(rowIndex).getId();
+                return marca.getId();
             case 1:
-                return lista.get(rowIndex).getDescripcion();
+                return marca.getDescripcion();
         }
         return "";
     }
