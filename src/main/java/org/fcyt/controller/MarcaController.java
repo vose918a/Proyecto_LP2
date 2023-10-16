@@ -99,7 +99,10 @@ public class MarcaController implements ActionListener {
         }
     }
 
-    public void showMarcaGUI(){view.setVisible(true);}
+    public void showMarcaGUI(){
+        view.setLocationRelativeTo(view);
+        view.setVisible(true);
+    }
 
     private Marca getMarcaForm(){
         Marca marca = new Marca();

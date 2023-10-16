@@ -95,6 +95,7 @@ public class EmpresaController implements ActionListener {
     }
 
     public void showEmpresaGUI(){
+        view.setLocationRelativeTo(view);
         view.setVisible(true);
     }
 

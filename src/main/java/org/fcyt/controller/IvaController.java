@@ -101,7 +101,10 @@ public class IvaController implements ActionListener {
         }
     }
 
-    public void showIvaGUI(){view.setVisible(true);}
+    public void showIvaGUI(){
+        view.setLocationRelativeTo(view);
+        view.setVisible(true);
+    }
 
     public Iva getIvaForm(){
         Iva iva = new Iva();
