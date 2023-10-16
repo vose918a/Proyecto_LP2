@@ -11,7 +11,9 @@ public class MarcaTableModel extends AbstractTableModel {
 
     private String[] columNames = new String[] { "ID", "DESCRIPCION"};
 
-    public String[] getColumNames() {return columNames;}
+    public String getColumnName(int i) {
+        return columNames[i];
+    }
 
     public void setColumNames(String[] columNames) {this.columNames = columNames;}
     @Override

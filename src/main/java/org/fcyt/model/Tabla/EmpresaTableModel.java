@@ -10,7 +10,9 @@ public class EmpresaTableModel extends AbstractTableModel {
     List<Empresa> lista;
     private String[] columNames = new String []{"ID", "NOMBRE", "DIRECCION", "TELEFONO"};
 
-    public String[] getColumNames() {return columNames;}
+    public String getColumnName(int i) {
+        return columNames[i];
+    }
 
     public void setColumNames(String[] columNames) {this.columNames = columNames;}
 

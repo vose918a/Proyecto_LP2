@@ -11,8 +11,8 @@ public class IvaTableModel extends AbstractTableModel {
 
     private String[] columNames = new String[]{"ID", "DESCRPCION"};
 
-    private String[] getColumnNames() {
-        return columNames;
+    public String getColumnName(int i) {
+        return columNames[i];
     }
 
     public void setColumnNames(String[] columNames) {
